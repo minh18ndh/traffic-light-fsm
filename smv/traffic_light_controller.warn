@@ -1,0 +1,2 @@
+"traffic_light_controller.smv", line 68: warning: assignment to timer may be out of range
+warning: sensor declared but not assigned

@@ -1,0 +1,97 @@
+MODULE main
+
+VAR
+  state : {HW_GREEN_IDLE, HW_YELLOW, CITY_GREEN, CITY_YELLOW, HW_GREEN_HOLD};
+  timer : 0..5;
+  sensor : boolean;
+
+ASSIGN
+  init(state) := HW_GREEN_IDLE;
+  init(timer) := 0;
+
+  --------------------------------------------------
+  -- State transitions
+  --------------------------------------------------
+  next(state) :=
+    case
+
+      -- HW green idle
+      state = HW_GREEN_IDLE & sensor :
+        HW_YELLOW;
+
+      state = HW_GREEN_IDLE & !sensor :
+        HW_GREEN_IDLE;
+
+      -- HW yellow (3 steps: 0,1,2)
+      state = HW_YELLOW & timer = 2 :
+        CITY_GREEN;
+
+      state = HW_YELLOW & timer < 2 :
+        HW_YELLOW;
+
+      -- City green (5 steps: 0..4)
+      state = CITY_GREEN & timer = 4 :
+        CITY_YELLOW;
+
+      state = CITY_GREEN & timer < 4 :
+        CITY_GREEN;
+
+      -- City yellow (3 steps)
+      state = CITY_YELLOW & timer = 2 :
+        HW_GREEN_HOLD;
+
+      state = CITY_YELLOW & timer < 2 :
+        CITY_YELLOW;
+
+      -- HW green hold
+      state = HW_GREEN_HOLD & timer < 4 :
+        HW_GREEN_HOLD;
+
+      state = HW_GREEN_HOLD & timer = 4 & sensor :
+        HW_YELLOW;
+
+      state = HW_GREEN_HOLD & timer = 4 & !sensor :
+        HW_GREEN_IDLE;
+
+      TRUE : HW_GREEN_IDLE;
+
+    esac;
+
+  --------------------------------------------------
+  -- Timer logic (no overflow)
+  --------------------------------------------------
+  next(timer) :=
+    case
+      !(next(state) = state) : 0;
+      timer = 5            : 5;
+      TRUE                 : timer + 1;
+    esac;
+
+DEFINE
+  hw_green := (state = HW_GREEN_IDLE) | (state = HW_GREEN_HOLD);
+  hw_yellow := (state = HW_YELLOW);
+  hw_red := (state = CITY_GREEN) | (state = CITY_YELLOW);
+
+  city_green := (state = CITY_GREEN);
+  city_yellow := (state = CITY_YELLOW);
+  city_red := (state = HW_GREEN_IDLE) | (state = HW_YELLOW) | (state = HW_GREEN_HOLD);
+
+--------------------------------------------------
+-- PROPERTIES (CTL)
+--------------------------------------------------
+
+-- Safety: no conflicting greens
+SPEC AG !(hw_green & city_green)
+
+-- Safety: no self-conflict
+SPEC AG !(hw_green & hw_red)
+SPEC AG !(city_green & city_red)
+
+-- Transition correctness
+SPEC AG (state = HW_GREEN_IDLE & sensor -> AX state = HW_YELLOW)
+
+-- Liveness: if sensor triggers, city eventually gets green
+SPEC AG (sensor -> AF state = CITY_GREEN)
+
+-- No deadlock
+SPEC AG EX TRUE

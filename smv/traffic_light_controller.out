@@ -1,0 +1,424 @@
+{
+/* description */ "(AG (~(hw_green&city_green))) "
+/* identifier  */ {}
+/* truth value */ 1
+/* loop begins */ 0
+/* time */ 1776574134
+{
+}
+}
+{
+/* description */ "(AG (~(hw_green&hw_red))) "
+/* identifier  */ {}
+/* truth value */ 1
+/* loop begins */ 0
+/* time */ 1776574134
+{
+}
+}
+{
+/* description */ "(AG (~(city_green&city_red))) "
+/* identifier  */ {}
+/* truth value */ 1
+/* loop begins */ 0
+/* time */ 1776574134
+{
+}
+}
+{
+/* description */ "(AG (((state=HW_GREEN_IDLE)&sensor) ->(AX (state=HW_YELLOW)))) "
+/* identifier  */ {}
+/* truth value */ 1
+/* loop begins */ 0
+/* time */ 1776574134
+{
+}
+}
+{
+/* description */ "(AG (sensor ->(AF (state=CITY_GREEN)))) "
+/* identifier  */ {}
+/* truth value */ 0
+/* loop begins */ 23
+/* time */ 1776574134
+{
+/* state 1 */{
+#75 "traffic_light_controller.smv"
+\city_green  = 0,
+#77 "traffic_light_controller.smv"
+\city_red  = 1,
+#71 "traffic_light_controller.smv"
+\hw_green  = 1,
+#73 "traffic_light_controller.smv"
+\hw_red  = 0,
+# 1 "$noline$"
+\sensor  = 1,
+#9 "traffic_light_controller.smv"
+\state  = \HW_GREEN_IDLE ,
+#10 "traffic_light_controller.smv"
+\timer  = 0
+}
+/* state 2 */{
+#75 "traffic_light_controller.smv"
+\city_green  = 0,
+#77 "traffic_light_controller.smv"
+\city_red  = 1,
+#71 "traffic_light_controller.smv"
+\hw_green  = 0,
+#73 "traffic_light_controller.smv"
+\hw_red  = 0,
+# 1 "$noline$"
+\sensor  = 0,
+#58 "traffic_light_controller.smv"
+\state  = \HW_YELLOW ,
+# 1 "$noline$"
+\timer  = 0
+}
+/* state 3 */{
+#75 "traffic_light_controller.smv"
+\city_green  = 0,
+#77 "traffic_light_controller.smv"
+\city_red  = 1,
+#71 "traffic_light_controller.smv"
+\hw_green  = 0,
+#73 "traffic_light_controller.smv"
+\hw_red  = 0,
+# 1 "$noline$"
+\sensor  = 0,
+#58 "traffic_light_controller.smv"
+\state  = \HW_YELLOW ,
+# 1 "$noline$"
+\timer  = 1
+}
+/* state 4 */{
+#75 "traffic_light_controller.smv"
+\city_green  = 0,
+#77 "traffic_light_controller.smv"
+\city_red  = 1,
+#71 "traffic_light_controller.smv"
+\hw_green  = 0,
+#73 "traffic_light_controller.smv"
+\hw_red  = 0,
+# 1 "$noline$"
+\sensor  = 0,
+#58 "traffic_light_controller.smv"
+\state  = \HW_YELLOW ,
+# 1 "$noline$"
+\timer  = 2
+}
+/* state 5 */{
+#75 "traffic_light_controller.smv"
+\city_green  = 1,
+#77 "traffic_light_controller.smv"
+\city_red  = 0,
+#71 "traffic_light_controller.smv"
+\hw_green  = 0,
+#73 "traffic_light_controller.smv"
+\hw_red  = 1,
+# 1 "$noline$"
+\sensor  = 0,
+#58 "traffic_light_controller.smv"
+\state  = \CITY_GREEN ,
+# 1 "$noline$"
+\timer  = 0
+}
+/* state 6 */{
+#75 "traffic_light_controller.smv"
+\city_green  = 1,
+#77 "traffic_light_controller.smv"
+\city_red  = 0,
+#71 "traffic_light_controller.smv"
+\hw_green  = 0,
+#73 "traffic_light_controller.smv"
+\hw_red  = 1,
+# 1 "$noline$"
+\sensor  = 0,
+#58 "traffic_light_controller.smv"
+\state  = \CITY_GREEN ,
+# 1 "$noline$"
+\timer  = 1
+}
+/* state 7 */{
+#75 "traffic_light_controller.smv"
+\city_green  = 1,
+#77 "traffic_light_controller.smv"
+\city_red  = 0,
+#71 "traffic_light_controller.smv"
+\hw_green  = 0,
+#73 "traffic_light_controller.smv"
+\hw_red  = 1,
+# 1 "$noline$"
+\sensor  = 0,
+#58 "traffic_light_controller.smv"
+\state  = \CITY_GREEN ,
+# 1 "$noline$"
+\timer  = 2
+}
+/* state 8 */{
+#75 "traffic_light_controller.smv"
+\city_green  = 1,
+#77 "traffic_light_controller.smv"
+\city_red  = 0,
+#71 "traffic_light_controller.smv"
+\hw_green  = 0,
+#73 "traffic_light_controller.smv"
+\hw_red  = 1,
+# 1 "$noline$"
+\sensor  = 0,
+#58 "traffic_light_controller.smv"
+\state  = \CITY_GREEN ,
+# 1 "$noline$"
+\timer  = 3
+}
+/* state 9 */{
+#75 "traffic_light_controller.smv"
+\city_green  = 1,
+#77 "traffic_light_controller.smv"
+\city_red  = 0,
+#71 "traffic_light_controller.smv"
+\hw_green  = 0,
+#73 "traffic_light_controller.smv"
+\hw_red  = 1,
+# 1 "$noline$"
+\sensor  = 0,
+#58 "traffic_light_controller.smv"
+\state  = \CITY_GREEN ,
+# 1 "$noline$"
+\timer  = 4
+}
+/* state 10 */{
+#75 "traffic_light_controller.smv"
+\city_green  = 0,
+#77 "traffic_light_controller.smv"
+\city_red  = 0,
+#71 "traffic_light_controller.smv"
+\hw_green  = 0,
+#73 "traffic_light_controller.smv"
+\hw_red  = 1,
+# 1 "$noline$"
+\sensor  = 1,
+#58 "traffic_light_controller.smv"
+\state  = \CITY_YELLOW ,
+# 1 "$noline$"
+\timer  = 0
+}
+/* state 11 */{
+#75 "traffic_light_controller.smv"
+\city_green  = 0,
+#77 "traffic_light_controller.smv"
+\city_red  = 0,
+#71 "traffic_light_controller.smv"
+\hw_green  = 0,
+#73 "traffic_light_controller.smv"
+\hw_red  = 1,
+# 1 "$noline$"
+\sensor  = 0,
+#58 "traffic_light_controller.smv"
+\state  = \CITY_YELLOW ,
+# 1 "$noline$"
+\timer  = 1
+}
+/* state 12 */{
+#75 "traffic_light_controller.smv"
+\city_green  = 0,
+#77 "traffic_light_controller.smv"
+\city_red  = 0,
+#71 "traffic_light_controller.smv"
+\hw_green  = 0,
+#73 "traffic_light_controller.smv"
+\hw_red  = 1,
+# 1 "$noline$"
+\sensor  = 0,
+#58 "traffic_light_controller.smv"
+\state  = \CITY_YELLOW ,
+# 1 "$noline$"
+\timer  = 2
+}
+/* state 13 */{
+#75 "traffic_light_controller.smv"
+\city_green  = 0,
+#77 "traffic_light_controller.smv"
+\city_red  = 1,
+#71 "traffic_light_controller.smv"
+\hw_green  = 1,
+#73 "traffic_light_controller.smv"
+\hw_red  = 0,
+# 1 "$noline$"
+\sensor  = 0,
+#58 "traffic_light_controller.smv"
+\state  = \HW_GREEN_HOLD ,
+# 1 "$noline$"
+\timer  = 0
+}
+/* state 14 */{
+#75 "traffic_light_controller.smv"
+\city_green  = 0,
+#77 "traffic_light_controller.smv"
+\city_red  = 1,
+#71 "traffic_light_controller.smv"
+\hw_green  = 1,
+#73 "traffic_light_controller.smv"
+\hw_red  = 0,
+# 1 "$noline$"
+\sensor  = 0,
+#58 "traffic_light_controller.smv"
+\state  = \HW_GREEN_HOLD ,
+# 1 "$noline$"
+\timer  = 1
+}
+/* state 15 */{
+#75 "traffic_light_controller.smv"
+\city_green  = 0,
+#77 "traffic_light_controller.smv"
+\city_red  = 1,
+#71 "traffic_light_controller.smv"
+\hw_green  = 1,
+#73 "traffic_light_controller.smv"
+\hw_red  = 0,
+# 1 "$noline$"
+\sensor  = 0,
+#58 "traffic_light_controller.smv"
+\state  = \HW_GREEN_HOLD ,
+# 1 "$noline$"
+\timer  = 2
+}
+/* state 16 */{
+#75 "traffic_light_controller.smv"
+\city_green  = 0,
+#77 "traffic_light_controller.smv"
+\city_red  = 1,
+#71 "traffic_light_controller.smv"
+\hw_green  = 1,
+#73 "traffic_light_controller.smv"
+\hw_red  = 0,
+# 1 "$noline$"
+\sensor  = 0,
+#58 "traffic_light_controller.smv"
+\state  = \HW_GREEN_HOLD ,
+# 1 "$noline$"
+\timer  = 3
+}
+/* state 17 */{
+#75 "traffic_light_controller.smv"
+\city_green  = 0,
+#77 "traffic_light_controller.smv"
+\city_red  = 1,
+#71 "traffic_light_controller.smv"
+\hw_green  = 1,
+#73 "traffic_light_controller.smv"
+\hw_red  = 0,
+# 1 "$noline$"
+\sensor  = 0,
+#58 "traffic_light_controller.smv"
+\state  = \HW_GREEN_HOLD ,
+# 1 "$noline$"
+\timer  = 4
+}
+/* state 18 */{
+#75 "traffic_light_controller.smv"
+\city_green  = 0,
+#77 "traffic_light_controller.smv"
+\city_red  = 1,
+#71 "traffic_light_controller.smv"
+\hw_green  = 1,
+#73 "traffic_light_controller.smv"
+\hw_red  = 0,
+# 1 "$noline$"
+\sensor  = 0,
+#58 "traffic_light_controller.smv"
+\state  = \HW_GREEN_IDLE ,
+# 1 "$noline$"
+\timer  = 0
+}
+/* state 19 */{
+#75 "traffic_light_controller.smv"
+\city_green  = 0,
+#77 "traffic_light_controller.smv"
+\city_red  = 1,
+#71 "traffic_light_controller.smv"
+\hw_green  = 1,
+#73 "traffic_light_controller.smv"
+\hw_red  = 0,
+# 1 "$noline$"
+\sensor  = 0,
+#58 "traffic_light_controller.smv"
+\state  = \HW_GREEN_IDLE ,
+# 1 "$noline$"
+\timer  = 1
+}
+/* state 20 */{
+#75 "traffic_light_controller.smv"
+\city_green  = 0,
+#77 "traffic_light_controller.smv"
+\city_red  = 1,
+#71 "traffic_light_controller.smv"
+\hw_green  = 1,
+#73 "traffic_light_controller.smv"
+\hw_red  = 0,
+# 1 "$noline$"
+\sensor  = 0,
+#58 "traffic_light_controller.smv"
+\state  = \HW_GREEN_IDLE ,
+# 1 "$noline$"
+\timer  = 2
+}
+/* state 21 */{
+#75 "traffic_light_controller.smv"
+\city_green  = 0,
+#77 "traffic_light_controller.smv"
+\city_red  = 1,
+#71 "traffic_light_controller.smv"
+\hw_green  = 1,
+#73 "traffic_light_controller.smv"
+\hw_red  = 0,
+# 1 "$noline$"
+\sensor  = 0,
+#58 "traffic_light_controller.smv"
+\state  = \HW_GREEN_IDLE ,
+# 1 "$noline$"
+\timer  = 3
+}
+/* state 22 */{
+#75 "traffic_light_controller.smv"
+\city_green  = 0,
+#77 "traffic_light_controller.smv"
+\city_red  = 1,
+#71 "traffic_light_controller.smv"
+\hw_green  = 1,
+#73 "traffic_light_controller.smv"
+\hw_red  = 0,
+# 1 "$noline$"
+\sensor  = 0,
+#58 "traffic_light_controller.smv"
+\state  = \HW_GREEN_IDLE ,
+# 1 "$noline$"
+\timer  = 4
+}
+/* loop begins here */
+/* state 23 */{
+#75 "traffic_light_controller.smv"
+\city_green  = 0,
+#77 "traffic_light_controller.smv"
+\city_red  = 1,
+#71 "traffic_light_controller.smv"
+\hw_green  = 1,
+#73 "traffic_light_controller.smv"
+\hw_red  = 0,
+# 1 "$noline$"
+\sensor  = 0,
+#58 "traffic_light_controller.smv"
+\state  = \HW_GREEN_IDLE ,
+# 1 "$noline$"
+\timer  = 5
+}
+/* loop back to state 23 */
+}
+}
+{
+/* description */ "(AG (EX 1)) "
+/* identifier  */ {}
+/* truth value */ 1
+/* loop begins */ 0
+/* time */ 1776574134
+{
+}
+}
