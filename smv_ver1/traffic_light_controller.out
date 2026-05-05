@@ -3,7 +3,7 @@
 /* identifier  */ {}
 /* truth value */ 1
 /* loop begins */ 0
-/* time */ 1778021466
+/* time */ 1778021940
 {
 }
 }
@@ -12,7 +12,7 @@
 /* identifier  */ {}
 /* truth value */ 1
 /* loop begins */ 0
-/* time */ 1778021466
+/* time */ 1778021940
 {
 }
 }
@@ -21,7 +21,7 @@
 /* identifier  */ {}
 /* truth value */ 1
 /* loop begins */ 0
-/* time */ 1778021466
+/* time */ 1778021940
 {
 }
 }
@@ -30,7 +30,7 @@
 /* identifier  */ {}
 /* truth value */ 1
 /* loop begins */ 0
-/* time */ 1778021466
+/* time */ 1778021940
 {
 }
 }
@@ -39,7 +39,7 @@
 /* identifier  */ {}
 /* truth value */ 0
 /* loop begins */ 23
-/* time */ 1778021466
+/* time */ 1778021940
 {
 /* state 1 */{
 #75 "traffic_light_controller.smv"
@@ -418,7 +418,7 @@
 /* identifier  */ {}
 /* truth value */ 1
 /* loop begins */ 0
-/* time */ 1778021466
+/* time */ 1778021940
 {
 }
 }

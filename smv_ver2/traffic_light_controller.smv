@@ -104,7 +104,7 @@ SPEC AG !(city_green & city_red)
 -- Transition correctness (now uses request)
 SPEC AG (state = HW_GREEN_IDLE & request -> AX state = HW_YELLOW)
 
--- Liveness: sensor trigger must eventually lead to city green
+-- Liveness: if sensor triggers, city eventually gets green
 SPEC AG (sensor -> AF state = CITY_GREEN)
 
 -- No deadlock
