@@ -1,0 +1,54 @@
+{
+/* description */ "(AG (~(hw_green&city_green))) "
+/* identifier  */ {}
+/* truth value */ 1
+/* loop begins */ 0
+/* time */ 1778021405
+{
+}
+}
+{
+/* description */ "(AG (~(hw_green&hw_red))) "
+/* identifier  */ {}
+/* truth value */ 1
+/* loop begins */ 0
+/* time */ 1778021405
+{
+}
+}
+{
+/* description */ "(AG (~(city_green&city_red))) "
+/* identifier  */ {}
+/* truth value */ 1
+/* loop begins */ 0
+/* time */ 1778021405
+{
+}
+}
+{
+/* description */ "(AG (((state=HW_GREEN_IDLE)&request) ->(AX (state=HW_YELLOW)))) "
+/* identifier  */ {}
+/* truth value */ 1
+/* loop begins */ 0
+/* time */ 1778021405
+{
+}
+}
+{
+/* description */ "(AG (sensor ->(AF (state=CITY_GREEN)))) "
+/* identifier  */ {}
+/* truth value */ 1
+/* loop begins */ 0
+/* time */ 1778021405
+{
+}
+}
+{
+/* description */ "(AG (EX 1)) "
+/* identifier  */ {}
+/* truth value */ 1
+/* loop begins */ 0
+/* time */ 1778021405
+{
+}
+}
